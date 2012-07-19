@@ -1,0 +1,17 @@
+{
+  "author": "Tom Wilson <tom@jackhq.com> (http://jackhq.tumblr.com)",
+  "name": "w3",
+  "description": "A nodejs http file server",
+  "version": "0.1.0",
+  "dependencies": {
+    "filed": "0.0.6"
+  },
+  "devDependencies": {},
+  "optionalDependencies": {},
+  "engines": {
+    "node": "*"
+  },  
+  "bin": {
+    "w3": "./bin/w3"
+  }
+}
