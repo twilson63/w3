@@ -2,6 +2,8 @@
 
 A static web server that is easy to install and easy to run
 
+[![Build Status](https://secure.travis-ci.org/twilson63/w3.png)](http://travis-ci.org/twilson63/w3)
+
 ## Install
 
 ``` sh
