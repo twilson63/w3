@@ -2,7 +2,7 @@
   "author": "Tom Wilson <tom@jackhq.com> (http://jackhq.tumblr.com)",
   "name": "w3",
   "description": "A nodejs http file server",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "dependencies": {
     "filed": "0.0.6"
   },
@@ -10,8 +10,13 @@
   "optionalDependencies": {},
   "engines": {
     "node": "*"
-  },  
+  },
   "bin": {
     "w3": "./bin/w3"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/twilson63/w3.git"
+  },
+  "homepage": "http://twilson63.github.com/w3/"
 }
