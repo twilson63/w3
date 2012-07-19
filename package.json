@@ -20,5 +20,8 @@
     "type": "git",
     "url": "git://github.com/twilson63/w3.git"
   },
-  "homepage": "http://twilson63.github.com/w3/"
+  "homepage": "http://twilson63.github.com/w3/",
+  "scripts": {
+    "test": "node test"
+  }
 }
