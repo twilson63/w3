@@ -22,8 +22,14 @@ NodeJs
 
 ## Thanks
 
-@mikeal for filed 
-@ryanh for nodejs
+
+@mikeal for filed
+ 
+@nodejs community
+
+## Contributions
+
+Send Pull Requests
 
 ## LICENSE
 
