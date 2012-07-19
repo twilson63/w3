@@ -6,7 +6,9 @@
   "dependencies": {
     "filed": "0.0.6"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "request": "*"
+  },
   "optionalDependencies": {},
   "engines": {
     "node": "*"
