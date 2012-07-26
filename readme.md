@@ -34,3 +34,8 @@ Send Pull Requests
 ## LICENSE
 
 MIT
+
+## Contributors
+
+* Tom Wilson (@twilson63)
+* @nicogranelli

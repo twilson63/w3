@@ -4,7 +4,8 @@ var server = require('../'),
 
 server(3000);
 
-request('http://localhost:3000/test/fixture.html', function(e, r, b){
+// Added test to ignore query strings...
+request('http://localhost:3000/test/fixture.html?fooo=barr', function(e, r, b){
   assert.equal(b,'<h1>Hello World</h1>\n');
   //assert.equal('<h1>Hello</h1>', b);
   process.exit(0);
