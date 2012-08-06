@@ -9,12 +9,13 @@ var http = require('http'),
 // Pass any port via command line
 //
 // w3 3000
-module.exports = function(port){
+module.exports = function(port, root){
+  if(!root){ root = '.'; }
   http.createServer(function(req,res){
     if(req.method === 'GET') { 
       console.time('request');
       var url = stripQS(req.url);
-      filed('.' + url).pipe(res); 
+      filed(root + url).pipe(res); 
       console.timeEnd('request');
       console.log((new Date()).toString() + ' - REQUESTED...' + url);
     } else {
