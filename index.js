@@ -1,5 +1,6 @@
 var http = require('http'),
-  filed = require('filed');
+  filed = require('filed'),
+  fs = require('fs');
 
 // w3 static file server
 // 
@@ -14,7 +15,11 @@ module.exports = function(port){
     if(req.method === 'GET') { 
       console.time('request');
       var url = stripQS(req.url);
-      filed('.' + url).pipe(res); 
+      // Single Page HTML5PushState Support
+      fs.stat('.' + url, function(err, exists) {
+        if (err.code === 'ENOENT') { url = '/' }
+        filed('.' + url).pipe(res);
+      });
       console.timeEnd('request');
       console.log((new Date()).toString() + ' - REQUESTED...' + url);
     } else {
