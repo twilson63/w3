@@ -12,12 +12,17 @@ var http = require('http'),
 // w3 3000
 module.exports = function(port){
   http.createServer(function(req,res){
-    if(req.method === 'GET') { 
+    // handle favicon request..
+    if (url === '/favicon.ico') {
+      r.writeHead(200, {'Content-Type': 'image/x-icon'} );
+      r.end();
+      console.log('favicon requested');
+    } else if(req.method === 'GET') { 
       console.time('request');
       var url = stripQS(req.url);
       // Single Page HTML5PushState Support
       fs.stat('.' + url, function(err, exists) {
-        if (err.code === 'ENOENT') { url = '/' }
+        if (err && err.code === 'ENOENT') { url = '/' }
         filed('.' + url).pipe(res);
       });
       console.timeEnd('request');
