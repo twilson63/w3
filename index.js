@@ -10,7 +10,8 @@ var http = require('http'),
 // Pass any port via command line
 //
 // w3 3000
-module.exports = function(port){
+module.exports = function(port, root){
+  if(!root){ root = '.'; }
   http.createServer(function(req,res){
     // handle favicon request..
     if (url === '/favicon.ico') {
