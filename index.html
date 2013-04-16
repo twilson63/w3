@@ -1,50 +1,58 @@
 <!DOCTYPE html>
 <html>
+
   <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="W3 : A static web server" />
 
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
 
-    <title>W3 by twilson63</title>
+    <title>W3</title>
   </head>
 
   <body>
 
-    <header>
-      <div class="container">
-        <h1>W3</h1>
-        <h2>A static web server</h2>
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/twilson63/w3">View on GitHub</a>
 
-        <section id="downloads">
-          <a href="https://github.com/twilson63/w3/zipball/master" class="btn">Download as .zip</a>
-          <a href="https://github.com/twilson63/w3/tarball/master" class="btn">Download as .tar.gz</a>
-          <a href="https://github.com/twilson63/w3" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
-        </section>
-      </div>
-    </header>
+          <h1 id="project_title">W3</h1>
+          <h2 id="project_tagline">A static web server</h2>
 
-    <div class="container">
-      <section id="main_content">
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/twilson63/w3/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/twilson63/w3/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
         <h1>w3</h1>
 
-<p>A static web server that is easy to install and easy to run</p>
+<p>A static web server that is easy to install and easy to run.</p>
+
+<p>It also comes with pushState support so any non asset request will
+return index.html.</p>
 
 <p><a href="http://travis-ci.org/twilson63/w3"><img src="https://secure.travis-ci.org/twilson63/w3.png" alt="Build Status"></a></p>
 
 <h2>Install</h2>
 
-<div class="highlight">
-<pre>npm install w3 -g
-</pre>
-</div>
-
+<div class="highlight"><pre>npm install w3 -g
+</pre></div>
 
 <h2>Usage</h2>
 
 <pre><code>w3
+</code></pre>
+
+<p>or</p>
+
+<pre><code>w3 [port]
 </code></pre>
 
 <h2>Requirements</h2>
@@ -64,9 +72,25 @@
 <h2>LICENSE</h2>
 
 <p>MIT</p>
+
+<h2>Contributors</h2>
+
+<ul>
+<li>Tom Wilson (<a href="https://github.com/twilson63" class="user-mention">@twilson63</a>)</li>
+<li><a href="https://github.com/nicogranelli" class="user-mention">@nicogranelli</a></li>
+</ul>
       </section>
     </div>
 
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">W3 maintained by <a href="https://github.com/twilson63">twilson63</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
     
+
   </body>
 </html>
