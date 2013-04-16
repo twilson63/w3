@@ -21,11 +21,12 @@ module.exports = function(port, root){
     } else if(req.method === 'GET') { 
       console.time('request');
       var url = stripQS(req.url);
-      // Single Page HTML5PushState Support
-      fs.stat('.' + url, function(err, exists) {
-        if (err && err.code === 'ENOENT') { url = '/' }
+      // better Single Page HTML5PushState Support
+      if (isStaticResource(url)) {
         filed('.' + url).pipe(res);
-      });
+      } else {
+        filed('./index.html').pipe(res);
+      }
       console.timeEnd('request');
       console.log((new Date()).toString() + ' - REQUESTED...' + url);
     } else {
@@ -41,4 +42,11 @@ function stripQS(url){
   return pos>-1 ?
     url.substring(0, pos) : 
     url;
+}
+
+function isStaticResource(url) {
+  var assetTypes = [".js", ".css", ".txt", ".ico", ".html", ".png"];
+  return assetTypes.reduce(function(memo, assetType) {
+    return memo || url.indexOf(assetType) !== -1;
+  }, false);
 }

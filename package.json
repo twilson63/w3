@@ -2,7 +2,7 @@
   "author": "Tom Wilson <tom@jackhq.com> (http://jackhq.tumblr.com)",
   "name": "w3",
   "description": "A nodejs http file server",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "dependencies": {
     "filed": "0.0.6"
   },
