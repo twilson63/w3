@@ -1,6 +1,9 @@
 # w3
 
-A static web server that is easy to install and easy to run
+A static web server that is easy to install and easy to run.
+
+It also comes with pushState support so any non asset request will
+return index.html.
 
 [![Build Status](https://secure.travis-ci.org/twilson63/w3.png)](http://travis-ci.org/twilson63/w3)
 
@@ -14,6 +17,11 @@ npm install w3 -g
 
 ```
 w3
+```
+or
+
+```
+w3 [port]
 ```
 
 ## Requirements
