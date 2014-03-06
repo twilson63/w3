@@ -16,14 +16,14 @@ module.exports = function(port, root){
     if(req.method === 'GET') { 
       console.time('request');
       var url = stripQS(req.url);
-      filed('.' + url).pipe(res);
+      filed(root + url).pipe(res);
       console.timeEnd('request');
       console.log((new Date()).toString() + ' - REQUESTED...' + url);
     } else {
       console.log((new Date()).toString() + ' - INVALID REQUEST... ONLY GET REQUESTS SUPPORTED');
     }
   }).listen(port, function(){
-    console.log('w3 server listening on port -> ' + port.toString() + '\nctrl-c to exit');
+    console.log('w3 serving ' + root + '  on port -> ' + port.toString() + '\nctrl-c to exit');
   });
 }
 

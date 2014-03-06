@@ -6,6 +6,6 @@ var server  = path.join(path.dirname(fs.realpathSync(__filename)), '../');
 var argv = require('minimist')(process.argv);
 
 require(server)(
-  argv._[0] || process.env.PORT || 3000,
+  argv._[2] || process.env.PORT || 3000,
   argv.directory
 );
