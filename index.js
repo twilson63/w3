@@ -16,9 +16,16 @@ module.exports = function(port, root){
     if(req.method === 'GET') { 
       console.time('request');
       var url = stripQS(req.url);
+      var stream = filed(root + url);
+      stream.on('end', function() {
+        console.log('-------------------------------------------------');
+        console.log((new Date()).toString() + ' - REQUESTED...' + url);
+        console.timeEnd('request');
+      });
       filed(root + url).pipe(res);
-      console.timeEnd('request');
-      console.log((new Date()).toString() + ' - REQUESTED...' + url);
+      
+      //console.timeEnd('request');
+      //console.log((new Date()).toString() + ' - REQUESTED...' + url);
     } else {
       console.log((new Date()).toString() + ' - INVALID REQUEST... ONLY GET REQUESTS SUPPORTED');
     }
