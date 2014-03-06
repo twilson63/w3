@@ -3,5 +3,9 @@
 var path = require('path');
 var fs   = require('fs');
 var server  = path.join(path.dirname(fs.realpathSync(__filename)), '../');
+var argv = require('minimist')(process.argv);
 
-require(server)(process.argv[2] || 3000);
+require(server)(
+  argv._[0] || process.env.PORT || 3000,
+  argv.directory
+);
