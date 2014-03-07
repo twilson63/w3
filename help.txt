@@ -1,0 +1,32 @@
+(w3) Simple Static Server
+
+usage:
+
+- run static server in current directory for port 3000
+
+w3
+
+- run static server in current directory on port 6000
+
+w3 6000
+
+- run static server based on env vars
+
+export PORT = 4000
+w3
+
+- run static server in another directory for port 3000
+
+w3 --directory www
+
+- run in pushstate server mode
+
+w3 --pushstate
+
+- run in directory and pushstate mode
+
+w3 --directory www --pushstate
+
+
+
+

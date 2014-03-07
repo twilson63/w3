@@ -10,12 +10,13 @@ var http = require('http'),
 // Pass any port via command line
 //
 // w3 3000
-module.exports = function(port, root){
+module.exports = function(port, root, pushState) {
   if(!root){ root = '.'; }
   http.createServer(function(req,res){
     if(req.method === 'GET') { 
       console.time('request');
       var url = stripQS(req.url);
+      if (url.indexOf('.') < 0) { url = pushState; }
       var stream = filed(root + url);
       stream.on('end', function() {
         console.log('-------------------------------------------------');

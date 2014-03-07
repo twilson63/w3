@@ -4,8 +4,18 @@ var path = require('path');
 var fs   = require('fs');
 var server  = path.join(path.dirname(fs.realpathSync(__filename)), '../');
 var argv = require('minimist')(process.argv);
+var pkg = require(path.join(__dirname, '../package.json'));
+
+if (argv.help) {
+  console.log(pkg.name ' - ' + pkg.verson);
+  fs
+    .createReadStream(path.join(__dirname, '../help.txt'))
+    .pipe(process.stdout);
+  return true;
+}
 
 require(server)(
   argv._[2] || process.env.PORT || 3000,
-  argv.directory
+  argv.directory,
+  argv.pushstate === true ? '/index.html' : null
 );

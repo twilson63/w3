@@ -1,2 +1,3 @@
 7/26/2012 - Added Support to Ignore QueryStrings (@nicogranelli)
 4/10/2013 - Added HTML5 PushState Support (@twilson63)
+3/1/2014 - Added directory flag and support for process.env.PORT and pushState flag
