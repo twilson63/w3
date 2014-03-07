@@ -41,6 +41,30 @@ Enable pushstate
 ```
 w3 --pushstate
 ```
+
+## Better logging
+
+```
+Thu Mar 06 2014 19:51:08 GMT-0500 (EST) - REQUESTED.../index.html
+request: 22ms
+-------------------------------------------------
+Thu Mar 06 2014 19:51:08 GMT-0500 (EST) - REQUESTED.../css/bootstrap.css
+request: 10ms
+-------------------------------------------------
+Thu Mar 06 2014 19:51:08 GMT-0500 (EST) - REQUESTED.../bundle.js
+request: 25ms
+-------------------------------------------------
+Thu Mar 06 2014 19:51:17 GMT-0500 (EST) - REQUESTED.../index.html
+request: 2ms
+-------------------------------------------------
+Thu Mar 06 2014 19:51:17 GMT-0500 (EST) - REQUESTED.../css/bootstrap.css
+request: 2ms
+-------------------------------------------------
+Thu Mar 06 2014 19:51:17 GMT-0500 (EST) - REQUESTED.../bundle.js
+request: 10ms
+```
+
+
 ## Requirements
 
 NodeJs
