@@ -7,7 +7,7 @@ var argv = require('minimist')(process.argv);
 var pkg = require(path.join(__dirname, '../package.json'));
 
 if (argv.help) {
-  console.log(pkg.name ' - ' + pkg.verson);
+  console.log(pkg.name + ' - ' + pkg.verson);
   fs
     .createReadStream(path.join(__dirname, '../help.txt'))
     .pipe(process.stdout);
