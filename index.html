@@ -1,37 +1,35 @@
 <!DOCTYPE html>
 <html>
-
   <head>
-    <meta charset='utf-8' />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="W3 : A static web server" />
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
 
-    <title>W3</title>
+    <title>W3 by twilson63</title>
   </head>
 
   <body>
+    <header>
+      <div class="inner">
+        <h1>W3</h1>
+        <h2>A static web server</h2>
+        <a href="https://github.com/twilson63/w3" class="button"><small>View project on</small>GitHub</a>
+      </div>
+    </header>
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/twilson63/w3">View on GitHub</a>
-
-          <h1 id="project_title">W3</h1>
-          <h2 id="project_tagline">A static web server</h2>
-
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/twilson63/w3/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/twilson63/w3/tarball/master">Download this project as a tar.gz file</a>
-            </section>
-        </header>
-    </div>
-
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h1>w3</h1>
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          <h1>
+<a name="w3" class="anchor" href="#w3"><span class="octicon octicon-link"></span></a>w3</h1>
 
 <p>A static web server that is easy to install and easy to run.</p>
 
@@ -40,12 +38,14 @@ return index.html.</p>
 
 <p><a href="http://travis-ci.org/twilson63/w3"><img src="https://secure.travis-ci.org/twilson63/w3.png" alt="Build Status"></a></p>
 
-<h2>Install</h2>
+<h2>
+<a name="install" class="anchor" href="#install"><span class="octicon octicon-link"></span></a>Install</h2>
 
-<div class="highlight"><pre>npm install w3 -g
+<div class="highlight highlight-sh"><pre>npm install w3 -g
 </pre></div>
 
-<h2>Usage</h2>
+<h2>
+<a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h2>
 
 <pre><code>w3
 </code></pre>
@@ -55,42 +55,93 @@ return index.html.</p>
 <pre><code>w3 [port]
 </code></pre>
 
-<h2>Requirements</h2>
+<h2>
+<a name="options" class="anchor" href="#options"><span class="octicon octicon-link"></span></a>options</h2>
+
+<p>Specify target root directory</p>
+
+<p>--directory [dir]</p>
+
+<pre><code>w3 --directory www
+</code></pre>
+
+<p>Enable pushstate</p>
+
+<p>--pushstate</p>
+
+<pre><code>w3 --pushstate
+</code></pre>
+
+<h2>
+<a name="better-logging" class="anchor" href="#better-logging"><span class="octicon octicon-link"></span></a>Better logging</h2>
+
+<pre><code>Thu Mar 06 2014 19:51:08 GMT-0500 (EST) - REQUESTED.../index.html
+request: 22ms
+-------------------------------------------------
+Thu Mar 06 2014 19:51:08 GMT-0500 (EST) - REQUESTED.../css/bootstrap.css
+request: 10ms
+-------------------------------------------------
+Thu Mar 06 2014 19:51:08 GMT-0500 (EST) - REQUESTED.../bundle.js
+request: 25ms
+-------------------------------------------------
+Thu Mar 06 2014 19:51:17 GMT-0500 (EST) - REQUESTED.../index.html
+request: 2ms
+-------------------------------------------------
+Thu Mar 06 2014 19:51:17 GMT-0500 (EST) - REQUESTED.../css/bootstrap.css
+request: 2ms
+-------------------------------------------------
+Thu Mar 06 2014 19:51:17 GMT-0500 (EST) - REQUESTED.../bundle.js
+request: 10ms
+</code></pre>
+
+<h2>
+<a name="requirements" class="anchor" href="#requirements"><span class="octicon octicon-link"></span></a>Requirements</h2>
 
 <p>NodeJs</p>
 
-<h2>Thanks</h2>
+<h2>
+<a name="thanks" class="anchor" href="#thanks"><span class="octicon octicon-link"></span></a>Thanks</h2>
 
 <p><a href="https://github.com/mikeal" class="user-mention">@mikeal</a> for filed</p>
 
 <p><a href="https://github.com/nodejs" class="user-mention">@nodejs</a> community</p>
 
-<h2>Contributions</h2>
+<h2>
+<a name="contributions" class="anchor" href="#contributions"><span class="octicon octicon-link"></span></a>Contributions</h2>
 
 <p>Send Pull Requests</p>
 
-<h2>LICENSE</h2>
+<h2>
+<a name="license" class="anchor" href="#license"><span class="octicon octicon-link"></span></a>LICENSE</h2>
 
 <p>MIT</p>
 
-<h2>Contributors</h2>
+<h2>
+<a name="contributors" class="anchor" href="#contributors"><span class="octicon octicon-link"></span></a>Contributors</h2>
 
 <ul>
 <li>Tom Wilson (<a href="https://github.com/twilson63" class="user-mention">@twilson63</a>)</li>
 <li><a href="https://github.com/nicogranelli" class="user-mention">@nicogranelli</a></li>
 </ul>
-      </section>
+        </section>
+
+        <aside id="sidebar">
+          <a href="https://github.com/twilson63/w3/zipball/master" class="button">
+            <small>Download</small>
+            .zip file
+          </a>
+          <a href="https://github.com/twilson63/w3/tarball/master" class="button">
+            <small>Download</small>
+            .tar.gz file
+          </a>
+
+          <p class="repo-owner"><a href="https://github.com/twilson63/w3"></a> is maintained by <a href="https://github.com/twilson63">twilson63</a>.</p>
+
+          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
+        </aside>
+      </div>
     </div>
 
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">W3 maintained by <a href="https://github.com/twilson63">twilson63</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
-      </footer>
-    </div>
-
-    
-
+  
   </body>
 </html>
