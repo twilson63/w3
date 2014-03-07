@@ -24,6 +24,23 @@ or
 w3 [port]
 ```
 
+## options
+
+Specify target root directory
+
+--directory [dir]
+
+```
+w3 --directory www
+```
+
+Enable pushstate
+
+--pushstate
+
+```
+w3 --pushstate
+```
 ## Requirements
 
 NodeJs
