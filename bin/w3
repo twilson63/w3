@@ -15,7 +15,7 @@ if (argv.help) {
 }
 
 require(server)(
-  argv._[2] || process.env.PORT || 3000,
+  argv._[2] || process.env.PORT || process.env.VCAP_APP_PORT || 3000,
   argv.directory,
   argv.pushstate === true ? '/index.html' : null
 );
