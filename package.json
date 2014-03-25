@@ -5,7 +5,8 @@
   "version": "0.4.3",
   "dependencies": {
     "filed": "latest",
-    "minimist": "0.0.8"
+    "minimist": "0.0.8",
+    "specify": "~1.2.1"
   },
   "devDependencies": {
     "request": "*"

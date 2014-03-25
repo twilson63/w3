@@ -17,6 +17,7 @@ module.exports = function(port, root, pushState) {
       console.time('request');
       var url = stripQS(req.url);
       if (!url) url = '/index.html';
+      if (url === '/') url = '/index.html';
       if (url.indexOf('.') < 0) { url = pushState; }
       var stream = filed(root + url);
       stream.on('end', function() {
