@@ -6,9 +6,11 @@
   "dependencies": {
     "minimist": "0.0.8",
     "st": "^0.4.1"
+    "minimist": "0.0.8"
   },
   "devDependencies": {
-    "request": "*"
+    "request": "*",
+    "specify": "~1.2.1"
   },
   "optionalDependencies": {},
   "engines": {

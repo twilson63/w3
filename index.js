@@ -28,10 +28,3 @@ module.exports = function(port, root, pushState) {
     console.log('w3 serving ' + root + '  on port -> ' + port.toString() + '\nctrl-c to exit');
   });
 }
-
-function stripQS(url){
-  var pos = url.indexOf('?');
-  return pos>-1 ?
-    url.substring(0, pos) : 
-    url;
-}
