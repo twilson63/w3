@@ -1,5 +1,5 @@
 var http = require('http'),
-  filed = require('filed'),
+  st = require('st'),
   fs = require('fs');
 
 // w3 static file server
@@ -9,28 +9,21 @@ var http = require('http'),
 //
 // Pass any port via command line
 //
-// w3 3000
+// w3 3000 --directory public --pushstate
+//
 module.exports = function(port, root, pushState) {
   if(!root){ root = '.'; }
+  var mount = st({ path: root, url: '/', index: 'index.html', passthrough: (pushState ? true: false)});
   http.createServer(function(req,res){
-    if(req.method === 'GET') { 
-      console.time('request');
-      var url = stripQS(req.url);
-      if (!url) url = '/index.html';
-      if (url.indexOf('.') < 0) { url = pushState; }
-      var stream = filed(root + url);
-      stream.on('end', function() {
-        console.log('-------------------------------------------------');
-        console.log((new Date()).toString() + ' - REQUESTED...' + url);
-        console.timeEnd('request');
-      });
-      filed(root + url).pipe(res);
-      
-      //console.timeEnd('request');
-      //console.log((new Date()).toString() + ' - REQUESTED...' + url);
-    } else {
-      console.log((new Date()).toString() + ' - INVALID REQUEST... ONLY GET REQUESTS SUPPORTED');
-    }
+    console.time('duration');
+    mount(req, res, function() {
+      // if passthrough true always send index.html
+      fs.createReadStream(root + '/index.html').pipe(res);
+    });
+    res.once('finish', function() {
+      console.log('%s %s - %s -> %s', (new Date()), req.method, req.url, res.statusCode);
+      console.timeEnd('duration');        
+    });
   }).listen(port, function(){
     console.log('w3 serving ' + root + '  on port -> ' + port.toString() + '\nctrl-c to exit');
   });
