@@ -5,7 +5,7 @@
   "version": "0.6.0",
   "dependencies": {
     "minimist": "0.0.8",
-    "st": "^0.4.1"
+    "st": "^0.4.1",
     "minimist": "0.0.8"
   },
   "devDependencies": {
