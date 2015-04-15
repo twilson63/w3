@@ -13,7 +13,7 @@ var http = require('http'),
 //
 module.exports = function(port, root, pushState) {
   if(!root){ root = '.'; }
-  var mount = st({ path: root, url: '/', index: 'index.html', passthrough: (pushState ? true: false)});
+  var mount = st({ path: root, url: '/', cache: false, index: 'index.html', passthrough: (pushState ? true: false)});
   http.createServer(function(req,res){
     console.time('duration');
     mount(req, res, function() {
