@@ -4,8 +4,8 @@
   "description": "A nodejs http file server",
   "version": "0.6.1",
   "dependencies": {
-    "minimist": "0.0.8",
-    "st": "^0.4.1"
+    "minimist": "^1.2.0",
+    "st": "^1.2.0"
   },
   "devDependencies": {
     "request": "*",
