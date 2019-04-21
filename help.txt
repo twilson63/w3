@@ -8,7 +8,7 @@ w3
 
 - run static server in current directory on port 6000
 
-w3 6000
+w3 --port 6000
 
 - run static server based on env vars
 
@@ -17,15 +17,9 @@ w3
 
 - run static server in another directory for port 3000
 
-w3 --directory www
+w3 dist
 
-- run in pushstate server mode
 
-w3 --pushstate
-
-- run in directory and pushstate mode
-
-w3 --directory www --pushstate
 
 
 

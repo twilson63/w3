@@ -1,9 +1,9 @@
 # w3
 
-A static web server that is easy to install and easy to run.
+version: 2.0.0
 
-It also comes with pushState support so any non asset request will
-return index.html.
+single page web server. great for development! 
+
 
 [![Build Status](https://secure.travis-ci.org/twilson63/w3.png)](http://travis-ci.org/twilson63/w3)
 
@@ -16,69 +16,42 @@ npm install w3 -g
 ## Usage
 
 ```
-w3
+w3 [directory]
 ```
 or
 
 ```
-w3 [port]
+w3 [directory] --port [port]
 ```
 
 ## options
 
-Specify target root directory
+SET PORT
 
---directory [dir]
-
-```
-w3 --directory www
-```
-
-Enable pushstate
-
---pushstate
+--port [port]
 
 ```
-w3 --pushstate
+w3 --port 4000
 ```
 
-## Better logging
+ENABLE Cache
 
 ```
-Thu Mar 06 2014 19:51:08 GMT-0500 (EST) - REQUESTED.../index.html
-request: 22ms
--------------------------------------------------
-Thu Mar 06 2014 19:51:08 GMT-0500 (EST) - REQUESTED.../css/bootstrap.css
-request: 10ms
--------------------------------------------------
-Thu Mar 06 2014 19:51:08 GMT-0500 (EST) - REQUESTED.../bundle.js
-request: 25ms
--------------------------------------------------
-Thu Mar 06 2014 19:51:17 GMT-0500 (EST) - REQUESTED.../index.html
-request: 2ms
--------------------------------------------------
-Thu Mar 06 2014 19:51:17 GMT-0500 (EST) - REQUESTED.../css/bootstrap.css
-request: 2ms
--------------------------------------------------
-Thu Mar 06 2014 19:51:17 GMT-0500 (EST) - REQUESTED.../bundle.js
-request: 10ms
+w3 --cache
 ```
 
 
 ## Requirements
 
-NodeJs
+* NodeJs
 
 ## Thanks
-
-
-@mikeal for filed
  
-@nodejs community
+* @nodejs community
 
 ## Contributions
 
-Send Pull Requests
+- Pull Request Welcome
 
 ## LICENSE
 
