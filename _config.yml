@@ -1,0 +1,8 @@
+title: W3
+description: A static web server
+google_analytics: 
+show_downloads: true
+theme: jekyll-theme-architect
+
+gems:
+  - jekyll-mentions
