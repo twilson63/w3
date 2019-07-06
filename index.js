@@ -26,7 +26,7 @@ module.exports = function(port=3000, root='.', options={cache: false}) {
     }
     filed(path + '/index.html').pipe(res);
     */
-  }).listen(port, function(){
+  }).listen(port, '0.0.0.0', function(){
     console.log(JSON.stringify({ 
       name: 'w3',
       port: port.toString(),
